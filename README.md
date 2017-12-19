@@ -59,7 +59,8 @@ The run script has several options to run the workload with various memory sizes
 - medium: 	**Default option**: from 1 to the maximal value by powers of 2
 - full:   	The entire range from 1 to the possible maximum is tested
 - list:   	Explicit (quoted) list is set by the user in the next parameter (e.g. “1 2 8”)
-Run the script with the default option:
+
+To run the script with the default option:
 ```
   # cd /root/sgemm
   # ./run_sgemm.sh
