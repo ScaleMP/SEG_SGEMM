@@ -1,8 +1,8 @@
-<H1>SGEMM BENCHMARK FOR LARGE MEMORY SYSTEMS</H1>
-<H2>INTRODUCTION</H2>
+#SGEMM BENCHMARK FOR LARGE MEMORY SYSTEMS
+##INTRODUCTION
 This SGEMM workload demonstrates the multiplication of very large (single precision) matrices , which is the corner stone of many algorithms, leveraging Intel(R) Math Kernel Library (a.k.a. MKL).
 In order to improve computation locality, the algorithm is performing the multiplication in segments.
-<H2>BENCHMARK DESCRIPTION</H2>
+##BENCHMARK DESCRIPTION
 The benchmark at hand is using matrices of various growing sizes (up to ~90% of system meory) and measuring the GFlop/s achieved.
 MATRICES SIZE CALCULATION
 The dimensions of the 3 matrices are as follows:
@@ -16,15 +16,10 @@ Total memory = (2 x (size x seq) + size x size) x 4 bytes
 = factor x seg x (2 x seg + factor x seg) x 4bytes
 The following table presents the the total memory required for various factors according to the calculation described above: 
 seg = 43211 
-<H2>SYSTEM AND BENCHMARK INSTALLATION AND CONFIGURATION</H2>
+##SYSTEM AND BENCHMARK INSTALLATION AND CONFIGURATION
 The instructions below assume installation on CentOS 7.3 or newer, but can be easily adjusted to run on other distributions.
 The following packages are required to run the SGEMM workload, and can be installed if needed using the following commands:
-```
-#yum install bc
-#yum install numactl
-#yum install time
-```
 
-
-
-
+  $yum install
+  $yum install numactl
+  $yum install time
