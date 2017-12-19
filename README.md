@@ -20,6 +20,31 @@ Total memory = (2 x (size x seq) + size x size) x 4 bytes
 
 The following table presents the the total memory required for various factors according to the calculation described above (for seg = 43211 ) :
 
+|Factor|Memory Footprint [GB]|
+|---|---|
+|1|21|
+|2|56|
+|3|104|
+|4|167|
+|5|243|
+|6|334|
+|7|438|
+|8|556|
+|9|689|
+|10|835|
+|11|995|
+|12|1,169|
+|13|1,356|
+|14|1,558|
+|15|1,774|
+|16|2,003|
+|17|2,247|
+|18|2,504|
+|19|2,775|
+|20|3,061|
+|21|3,360|
+|22|3,673|
+
 ## SYSTEM AND BENCHMARK INSTALLATION AND CONFIGURATION
 The instructions below assume installation on CentOS 7.3 or newer, but can be easily adjusted to run on other distributions.
 The following packages are required to run the SGEMM workload, and can be installed if needed using the following commands:
