@@ -1,6 +1,6 @@
 # SGEMM BENCHMARK FOR LARGE MEMORY SYSTEMS
 ## INTRODUCTION
-This SGEMM workload demonstrates the multiplication of very large (single precision) matrices, which is the corner stone of many algorithms, leveraging Intel(R) Math Kernel Library (a.k.a. MKL).
+This SGEMM workload demonstrates the multiplication of very large (single precision) matrices, which is the corner stone of many algorithms, leveraging Intel(R) Math Kernel Library (MKL).
 In order to improve computation locality, the algorithm is performing the multiplication in segments.
 ## BENCHMARK DESCRIPTION
 The benchmark at hand is using matrices of various growing sizes (up to ~90% of system meory) and measuring the GFlop/s achieved.
