@@ -1,6 +1,6 @@
 # SGEMM BENCHMARK FOR LARGE MEMORY SYSTEMS
 ## INTRODUCTION
-This SGEMM workload demonstrates the multiplication of very large (single precision) matrices , which is the corner stone of many algorithms, leveraging Intel(R) Math Kernel Library (a.k.a. MKL).
+This SGEMM workload demonstrates the multiplication of very large (single precision) matrices, which is the corner stone of many algorithms, leveraging Intel(R) Math Kernel Library (a.k.a. MKL).
 In order to improve computation locality, the algorithm is performing the multiplication in segments.
 ## BENCHMARK DESCRIPTION
 The benchmark at hand is using matrices of various growing sizes (up to ~90% of system meory) and measuring the GFlop/s achieved.
@@ -20,30 +20,19 @@ Total memory = (2 x (size x seq) + size x size) x 4 bytes
 
 The following table presents the the total memory required for various factors according to the calculation described above (for seg = 43211 ) :
 
-|Factor|Memory Footprint [GB]|
-|---|---|
-|1|21|
-|2|56|
-|3|104|
-|4|167|
-|5|243|
-|6|334|
-|7|438|
-|8|556|
-|9|689|
-|10|835|
-|11|995|
-|12|1,169|
-|13|1,356|
-|14|1,558|
-|15|1,774|
-|16|2,003|
-|17|2,247|
-|18|2,504|
-|19|2,775|
-|20|3,061|
-|21|3,360|
-|22|3,673|
+|Factor|Memory Footprint [GB]|          |Factor|Memory Footprint [GB]|
+|---|---|----------|---|---|
+|1|21|          |12|1,169|
+|2|56|          |13|1,356|
+|3|104|          |14|1,558|
+|4|167|          |15|1,774|
+|5|243|          |16|2,003|
+|6|334|          |17|2,247|
+|7|438|          |18|2,504|
+|8|556|          |19|2,775|
+|9|689|          |20|3,061|
+|10|835|          |21|3,360|
+|11|995|          |22|3,673|
 
 ## SYSTEM AND BENCHMARK INSTALLATION AND CONFIGURATION
 The instructions below assume installation on CentOS 7.3 or newer, but can be easily adjusted to run on other distributions.
@@ -101,6 +90,14 @@ As we are interested in the overall average GFlop/s achieved per run, it can be 
 ```
   # grep "Init time" log-gemm*.txt | grep GFlop
 ```
+
+
+
+
+*THIS SOFTWARE IS PROVIDED BY SCALEMP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL SCALEMP BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.*
+
+
 
 
 
