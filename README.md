@@ -38,9 +38,9 @@ The following table presents the the total memory required for various factors a
 The instructions below assume installation on CentOS 7.3 or newer, but can be easily adjusted to run on other distributions.
 The following packages are required to run the SGEMM workload, and can be installed if needed using the following commands:
 ```
-  # yum install
-  # yum install numactl
-  # yum install time
+  # sudo yum install bc
+  # sudo yum install numactl
+  # sudo yum install time
 ```
 
 ### BENCHMARK CONFIGURATION
