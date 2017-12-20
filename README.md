@@ -44,24 +44,34 @@ The following packages are required to run the SGEMM workload, and can be instal
 ```
 
 ### BENCHMARK CONFIGURATION
-1.	Create a folder named “sgemm”: 
+1.	Create a folder named “sgemm”, for example:: 
 ```
   # mkdir /root/sgemm
 ```
-2.	Step into the “redis” folder: 
+2.	Step into the “sgemm” folder: 
 ```
   # cd /root/sgemm
 ```
-3.	Create a file named mkl-seg.c with the code from the appendix “mkl-seg.c code” (or from the workload directory/tar).
-
-4.	Compile the code using the Intel compiler by pointing to the location of the intel compiler location, or alternatively use the statically compiled executable “mkl-seg” (from the workload directory / tar).
+3.	Create a file named mkl-seg.c with the code from “mkl-seg.c" in this repository, or download the file directly with the comamnd below:
+```
+  # wget https://raw.githubusercontent.com/ScaleMP/SGEMM/master/mkl-seg.c --no-check-certificate
+```
+4.	Compile the code using the Intel compiler by pointing to the location of the intel compiler variables, or alternatively use the statically compiled executable “mkl-seg” (from the tgz file in this repository) as described in the following step.
 ```
   # . /opt/intel/bin/compilervars.sh intel64
   # icc -O3 -ipo -static -g -fopenmp -mkl -o mkl-seg mkl-seg.c
 ```
-5.	Put a file named run_sgemm.sh with the code from the appendix “run_sgemm.sh script” (or from the workload directory/tar).
-
-6.	If you are not using a statically linked executable, uncomment and adjust the line pointing to the intel compiler variables:
+5. If you prefer to use the statically compiled version, you can download the mkl-seg-static.tgz manually and extract it, or use the follwoing commands:
+```
+  # wget https://raw.githubusercontent.com/ScaleMP/SGEMM/master/mkl-seg-static.tgz --no-check-certificate
+  # tar xzf mkl-seg-static.tgz
+```
+6.	Create a file named run_sgemm.sh with the code from “run_sgemm.sh" in this repository or download the file directly and set permissions to executable with the comamnd below:
+```
+  # wget https://raw.githubusercontent.com/ScaleMP/SGEMM/master/run_sgemm.sh --no-check-certificate
+  # chmod +x run_sgemm.sh
+```
+7.	If you are not using a statically linked executable, uncomment and adjust the line pointing to the intel compiler variables in the run_sgemm.sh script:
 ```
   # INTEL_COMPILER_VARS=/opt/intel/bin/compilervars.sh
 ```
