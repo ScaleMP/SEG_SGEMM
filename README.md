@@ -1,6 +1,6 @@
-# SGEMM BENCHMARK FOR LARGE MEMORY SYSTEMS
+# SEGMENTED SGEMM BENCHMARK FOR LARGE MEMORY SYSTEMS
 ## INTRODUCTION
-This SGEMM workload demonstrates the multiplication of very large (single precision) matrices, which is the corner stone of many algorithms, leveraging Intel(R) Math Kernel Library (MKL).
+This SEGMENTED SGEMM workload demonstrates the multiplication of very large (single precision) matrices, which is the corner stone of many algorithms, leveraging Intel(R) Math Kernel Library (MKL).
 In order to improve computation locality, the algorithm is performing the multiplication in segments.
 ## BENCHMARK DESCRIPTION
 The benchmark at hand is using matrices of various growing sizes (up to ~90% of system meory) and measuring the GFlop/s achieved.
@@ -54,7 +54,7 @@ The following packages are required to run the SGEMM workload, and can be instal
 ```
 3.	Create a file named mkl-seg.c with the code from “mkl-seg.c" in this repository, or download the file directly with the comamnd below:
 ```
-  # wget https://raw.githubusercontent.com/ScaleMP/SGEMM/master/mkl-seg.c --no-check-certificate
+  # wget https://raw.githubusercontent.com/ScaleMP/SEG_SGEMM/master/mkl-seg.c --no-check-certificate
 ```
 4.	Compile the code using the Intel compiler by pointing to the location of the intel compiler variables, or alternatively use the statically compiled executable “mkl-seg” (from the tgz file in this repository) as described in the following step.
 ```
@@ -63,12 +63,12 @@ The following packages are required to run the SGEMM workload, and can be instal
 ```
 5. If you prefer to use the statically compiled version, you can download the mkl-seg-static.tgz manually and extract it, or use the follwoing commands:
 ```
-  # wget https://raw.githubusercontent.com/ScaleMP/SGEMM/master/mkl-seg-static.tgz --no-check-certificate
+  # wget https://raw.githubusercontent.com/ScaleMP/SEG_SGEMM/master/mkl-seg-static.tgz --no-check-certificate
   # tar xzf mkl-seg-static.tgz
 ```
 6.	Create a file named run_sgemm.sh with the code from “run_sgemm.sh" in this repository or download the file directly and set permissions to executable with the comamnd below:
 ```
-  # wget https://raw.githubusercontent.com/ScaleMP/SGEMM/master/run_sgemm.sh --no-check-certificate
+  # wget https://raw.githubusercontent.com/ScaleMP/SEG_SGEMM/master/run_sgemm.sh --no-check-certificate
   # chmod +x run_sgemm.sh
 ```
 7.	If you are not using a statically linked executable, uncomment and adjust the line pointing to the intel compiler variables in the run_sgemm.sh script:
